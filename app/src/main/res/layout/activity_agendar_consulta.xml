@@ -7,4 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".activities.AgendarConsultaActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="20dp"
+        android:layout_height="27dp"
+        android:src="@tools:sample/avatars"
+        app:layout_constraintBottom_toTopOf="@+id/tvAgdConsulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/baseline_hdr_weak_24" />
+
+    <TextView
+        android:id="@+id/tvAgdConsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agendamento de consulta"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="84dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
