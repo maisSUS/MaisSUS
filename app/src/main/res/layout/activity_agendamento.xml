@@ -7,4 +7,81 @@
     android:layout_height="match_parent"
     tools:context=".activities.AgendamentoActivity">
 
+    <TextView
+        android:id="@+id/tvNomePacientePadraoMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fulano da Silva Santos"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DENTISTA"
+        android:textColorLink="#009688"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/tvNomePacienteMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Paciente:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consulta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <TextView
+        android:id="@+id/tvNomeProfissional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Profissional:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/tvNomeProfissonalPadrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luiza da Conceição Oliveira"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/tvDataConsultaMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data da Consulta:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <TextView
+        android:id="@+id/tvDataConsultaMaisPadrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd/mm/aaaa"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="229dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
