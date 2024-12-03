@@ -5,6 +5,4 @@
     android:id="@+id/CONSTRAINT"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.AgendarExameActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".activities.AgendarExameActivity"/>
