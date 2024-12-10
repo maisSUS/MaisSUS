@@ -20,31 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="99dp" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:text="Hepatide A"
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <Button
-        android:id="@+id/btnDetalhe6"
-        android:layout_width="120dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="DETALHES"
-        app:layout_constraintBottom_toBottomOf="@+id/textView18"
-        app:layout_constraintEnd_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toTopOf="@+id/textView18"
-        app:layout_constraintVertical_bias="1.0" />
-
     <Button
         android:id="@+id/btnDetalhe7"
         android:layout_width="120dp"
@@ -74,7 +49,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Hepatide B"
+        android:text="UBS Nova Almeida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +60,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Febre Amarela"
+        android:text="UBS P.Res.Laranjeiras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +71,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Coronel Virtus"
+        android:text="´UBS Jacaraípe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +82,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="HPV"
+        android:text="UBS Feu Rosa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,6 +105,7 @@
         android:layout_width="120dp"
         android:layout_height="36dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="DETALHES"
         android:textColor="#438e82"
