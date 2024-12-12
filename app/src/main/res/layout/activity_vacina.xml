@@ -68,7 +68,7 @@
                 android:text="Quantidades de doses:" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/tvDoses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -89,7 +89,7 @@
                 android:text="Idade:" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tvIdade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -106,6 +106,7 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcInfo"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

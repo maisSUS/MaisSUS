@@ -84,7 +84,7 @@
                 android:text="Localização" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/tvDoses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -105,7 +105,7 @@
                 android:text="Contato:" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tvIdade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
