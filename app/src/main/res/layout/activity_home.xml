@@ -52,24 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="456dp" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/tvLogoHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+SUS"
-            android:textColor="#438e82"
-            android:textSize="48sp" />
-    </FrameLayout>
-
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
@@ -94,5 +76,17 @@
         app:srcCompat="@drawable/baseline_account_box_24"
         tools:layout_editor_absoluteX="199dp"
         tools:layout_editor_absoluteY="595dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2d6157"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_action_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
