@@ -2,11 +2,22 @@ package arthur.francisco.gabi.mary.maissus.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import arthur.francisco.gabi.mary.maissus.R;
 
@@ -62,5 +73,47 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Configuração do carousel
+        ImageCarousel carousel = view.findViewById(R.id.carousel);
+        carousel.registerLifecycle(getLifecycle());
+
+        List<CarouselItem> list = new ArrayList<>();
+        list.add(new CarouselItem("https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080", "Foto 1"));
+        list.add(new CarouselItem("https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080", "Foto 2"));
+        carousel.setData(list);
+
+        // Configuração dos botões
+        Button btAgdConsulta = view.findViewById(R.id.btAgdConsulta);
+        Button btAgdExame = view.findViewById(R.id.btAgdExame);
+        Button btAgendamentos = view.findViewById(R.id.btAgendamentos);
+        Button btVacinas = view.findViewById(R.id.btVacinas);
+        Button btUnidades = view.findViewById(R.id.btUnidades);
+
+        btAgdConsulta.setOnClickListener(v -> {
+            // Ação para o botão Agendar Consulta
+            // Exemplo: Navegar para outra tela ou mostrar um Toast
+        });
+
+        btAgdExame.setOnClickListener(v -> {
+            // Ação para o botão Agendar Exame
+        });
+
+        btAgendamentos.setOnClickListener(v -> {
+            // Ação para o botão Meus Agendamentos
+        });
+
+        btVacinas.setOnClickListener(v -> {
+            // Ação para o botão Vacinas
+        });
+
+        btUnidades.setOnClickListener(v -> {
+            // Ação para o botão Unidades de Saúde
+        });
     }
 }
