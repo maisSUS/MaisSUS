@@ -21,11 +21,13 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="91dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Button"
+        android:backgroundTint="#e0f5f1"
+        android:text="Detalhes"
+        android:textColor="#226258"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
