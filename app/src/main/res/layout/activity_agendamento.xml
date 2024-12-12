@@ -24,7 +24,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:text="DENTISTA"
-            android:textColorLink="#009688"
+            android:textColor="#3c827a"
+            android:textColorLink="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -169,6 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:backgroundTint="#a40000"
                 android:text="Cancelar" />
 
         </LinearLayout>
