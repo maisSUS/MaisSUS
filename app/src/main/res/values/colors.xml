@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#a40000</color>
+    <color name="verde_spinner">#e0f5f1</color>
+    <color name="verde_spinner_borda">#A6BCB8</color>
+    <color name="verde_button">#3c827a</color>
 </resources>
