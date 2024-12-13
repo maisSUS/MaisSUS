@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 import arthur.francisco.gabi.mary.maissus.R;
 
 
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,10 +23,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AgendarConsultaActivity extends AppCompatActivity {
-
-    private Spinner spinnerUnidade, spinnerEspecialidade, spinnerProfissional, spinnerHorario;
-    private EditText etData;
-    private Button btnProsseguir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +50,12 @@ public class AgendarConsultaActivity extends AppCompatActivity {
         });
 
         // Inicializando os elementos
-        spinnerUnidade = findViewById(R.id.spUnidade);
-        spinnerEspecialidade = findViewById(R.id.spEspecialidade);
-        spinnerProfissional = findViewById(R.id.spProfissional);
-        spinnerHorario = findViewById(R.id.spHorario);
-        etData = findViewById(R.id.etData);
-        btnProsseguir = findViewById(R.id.btnConsulta);
+        Spinner spinnerUnidade = findViewById(R.id.spUnidade);
+        Spinner spinnerEspecialidade = findViewById(R.id.spEspecialidade);
+        Spinner spinnerProfissional = findViewById(R.id.spProfissional);
+        Spinner spinnerHorario = findViewById(R.id.spHorario);
+        EditText etData = findViewById(R.id.etData);
+        Button btnConsulta = findViewById(R.id.btnConsulta);
 
         // Listas de exemplo
         List<String> unidades = Arrays.asList("URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
@@ -73,18 +70,21 @@ public class AgendarConsultaActivity extends AppCompatActivity {
         configurarSpinner(spinnerHorario, horarios);
 
         // Evento do botão
-        btnProsseguir.setOnClickListener(v -> {
-            String unidadeSelecionada = spinnerUnidade.getSelectedItem().toString();
-            String especialidadeSelecionada = spinnerEspecialidade.getSelectedItem().toString();
-            String profissionalSelecionado = spinnerProfissional.getSelectedItem().toString();
-            String data = etData.getText().toString();
-            String horarioSelecionado = spinnerHorario.getSelectedItem().toString();
+        btnConsulta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String unidadeSelecionada = spinnerUnidade.getSelectedItem().toString();
+                String especialidadeSelecionada = spinnerEspecialidade.getSelectedItem().toString();
+                String profissionalSelecionado = spinnerProfissional.getSelectedItem().toString();
+                String data = etData.getText().toString();
+                String horarioSelecionado = spinnerHorario.getSelectedItem().toString();
 
-            if (data.isEmpty()) {
-                Toast.makeText(this, "Por favor, escolha uma data!", Toast.LENGTH_SHORT).show();
-            } else {
-                // Lógica para prosseguir com os dados
-                Toast.makeText(this, "Consulta agendada com sucesso!", Toast.LENGTH_SHORT).show();
+                if (data.isEmpty()) {
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, escolha uma data!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Lógica para prosseguir com os dados
+                    Toast.makeText(AgendarConsultaActivity.this, "Consulta agendada com sucesso!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
