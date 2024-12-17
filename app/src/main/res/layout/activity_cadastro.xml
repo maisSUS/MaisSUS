@@ -7,9 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".activities.CadastroActivity">
 
-    <HorizontalScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,147 +19,154 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <!-- Logo SUS -->
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:paddingTop="16dp"
                 app:srcCompat="@drawable/ic_action_logoverde" />
 
+            <!-- Título -->
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crie sua conta" />
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Crie sua conta"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nome *" />
-
+            <!-- Campo Nome -->
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/etNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Nome *" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sobrenome *" />
-
+            <!-- Campo Sobrenome -->
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/etSobrenome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text" />
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Sobrenome *" />
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CPF *" />
-
+            <!-- Campo CPF -->
             <EditText
-                android:id="@+id/editTextText5"
+                android:id="@+id/etCPF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="123.456.789-00" />
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="CPF *"
+                android:inputType="number" />
 
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cartão do SUS * " />
-
+            <!-- Campo Cartão do SUS -->
             <EditText
-                android:id="@+id/editTextText6"
+                android:id="@+id/etCartaoSUS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="1234 5678 9123 456" />
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Cartão do SUS *"
+                android:inputType="number" />
 
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Telefone *" />
-
+            <!-- Campo Telefone -->
             <EditText
-                android:id="@+id/editTextText7"
+                android:id="@+id/etTelefone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="(DDD) 12345-6789" />
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="Telefone *"
+                android:inputType="phone" />
 
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="E-mail *" />
-
+            <!-- Campo E-mail -->
             <EditText
-                android:id="@+id/editTextText8"
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="nome@dominio.com" />
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#CCCCCC"
+                android:hint="E-mail *"
+                android:inputType="textEmailAddress" />
 
-            <TextView
-                android:id="@+id/textView25"
+            <!-- Campo Senha -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Senha *" />
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editTextTextPassword"
+                <EditText
+                    android:id="@+id/etSenha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCCCCC"
+                    android:hint="Senha *"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+            <!-- Campo Confirmar Senha -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword" />
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Confirmar senha *" />
+                <EditText
+                    android:id="@+id/etConfirmarSenha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#CCCCCC"
+                    android:hint="Confirmar senha *"
+                    android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/editTextTextPassword2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword" />
+            </LinearLayout>
 
+            <!-- Botão Criar Conta -->
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/btnCriarConta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Criar conta" />
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#4C8B76"
+                android:text="Criar conta"
+                android:textColor="#FFFFFF" />
+
+            <!-- Link para Login -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Já possui conta?"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Já possui conta?" />
+                android:layout_gravity="center"
+                android:text="Faça o login"
+                android:textColor="#4C8B76"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Faça o login" />
         </LinearLayout>
-    </HorizontalScrollView>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
