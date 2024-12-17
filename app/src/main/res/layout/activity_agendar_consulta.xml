@@ -61,7 +61,8 @@
             <Spinner
                 android:id="@+id/spUnidade"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:id="@+id/space2"
@@ -82,7 +83,8 @@
             <Spinner
                 android:id="@+id/spEspecialidade"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:id="@+id/space4"
@@ -103,7 +105,8 @@
             <Spinner
                 android:id="@+id/spProfissional"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:id="@+id/space6"
@@ -147,7 +150,8 @@
             <Spinner
                 android:id="@+id/spHorario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:id="@+id/space10"
