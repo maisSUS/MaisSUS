@@ -1,14 +1,22 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.fragments.AgendamentosFragment;
+import arthur.francisco.gabi.mary.maissus.fragments.HomeFragment;
+import arthur.francisco.gabi.mary.maissus.fragments.PerfilFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -21,6 +29,28 @@ public class HomeActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bnvHome);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.opHome:
+                        HomeFragment homeFragment = HomeFragment.newInstance();
+                        setFragment(homeFragment);
+                        break;
+                    case R.id.opAgendamentos:
+                        AgendamentosFragment agendamentosFragment = AgendamentosFragment.newInstance();
+                        setFragment(agendamentosFragment);
+                        break;
+                    case R.id.opPerfil:
+                        PerfilFragment perfilFragment = PerfilFragment.newInstance();
+                        setFragment(perfilFragment);
+                        break;
+                }
+                return true;
+            }
         });
     }
 }

@@ -56,12 +56,8 @@ public class HomeFragment extends Fragment {
      * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
+    public static HomeFragment newInstance() {
         HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -97,7 +93,6 @@ public class HomeFragment extends Fragment {
         // Configuração dos botões
         Button btAgdConsulta = view.findViewById(R.id.btAgdConsulta);
         Button btAgdExame = view.findViewById(R.id.btAgdExame);
-        Button btAgendamentos = view.findViewById(R.id.btAgendamentos);
         Button btVacinas = view.findViewById(R.id.btVacinas);
         Button btUnidades = view.findViewById(R.id.btUnidades);
 
@@ -117,23 +112,12 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        btAgendamentos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AgendamentosFragment fragment = new AgendamentosFragment();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.flAgendamentos, fragment); // Container do fragmento
-                transaction.addToBackStack(null);
-                transaction.commit();
-            }
-        });
-
         btVacinas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 VacinasFragment fragment = new VacinasFragment();
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameLayoutContainer, fragment);
+                transaction.replace(R.id.flHome, fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
@@ -144,7 +128,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 UnidadesFragment fragment = new UnidadesFragment();
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameLayoutContainer, fragment);
+                transaction.replace(R.id.flHome, fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
