@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +24,8 @@ import java.util.Map;
 import arthur.francisco.gabi.mary.maissus.R;
 import arthur.francisco.gabi.mary.maissus.activities.AgendarConsultaActivity;
 import arthur.francisco.gabi.mary.maissus.activities.AgendarExameActivity;
+import arthur.francisco.gabi.mary.maissus.activities.HomeActivity;
+import arthur.francisco.gabi.mary.maissus.activities.MainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -101,35 +104,49 @@ public class HomeFragment extends Fragment {
         btAgdConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeFragment.this, AgendamentosFragment.class);
+                Intent intent = new Intent(getActivity(), AgendarConsultaActivity.class);
+                startActivity(intent);
             }
         });
 
         btAgdExame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeFragment.this, AgendarExameActivity.class);
+                Intent intent = new Intent(getActivity(), AgendarExameActivity.class);
+                startActivity(intent);
             }
         });
 
         btAgendamentos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeFragment.this, AgendarConsultaActivity.class);
+                AgendamentosFragment fragment = new AgendamentosFragment();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.flAgendamentos, fragment); // Container do fragmento
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
         btVacinas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeFragment.this, VacinasFragment.class);
+                VacinasFragment fragment = new VacinasFragment();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frameLayoutContainer, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
         btUnidades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeFragment.this, UnidadesFragment.class);
+                UnidadesFragment fragment = new UnidadesFragment();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.frameLayoutContainer, fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
     }
