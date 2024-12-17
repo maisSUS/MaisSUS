@@ -4,13 +4,14 @@
         <shape android:shape="rectangle">
             <solid android:color="@color/verde_spinner" />
             <corners android:radius="8dp" />
-            <stroke android:width="2dp" android:color="@color/verde_spinner_borda" />
+            <stroke android:width="1dp" android:color="@color/verde_spinner_borda" />
 
 
         </shape>
     </item>
     <item android:right="16dp" android:gravity="end|center_vertical">
         <bitmap
+            android:color="@color/verde_button"
             android:src="@android:drawable/arrow_down_float"
             android:gravity="center" />
     </item>

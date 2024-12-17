@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/tvLocalizacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -14,12 +14,12 @@
         android:layout_marginBottom="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="@+id/tvNomeUnidadeItem"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIconeUnidade" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/tvIconeUnidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/clinic_regular_24" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tvNomeUnidadeItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -37,9 +37,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/tvLocalizacao"
         app:layout_constraintEnd_toStartOf="@+id/btn_detalheubs"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/tvIconeUnidade"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
