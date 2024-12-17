@@ -1,5 +1,6 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -52,5 +53,20 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void navegarDetalhesAgendamento(){
+        Intent intent = new Intent(HomeActivity.this, AgendamentoActivity.class);
+        startActivity(intent);
+    }
+
+    public void navegarDetalhesVacina() {
+        Intent intent = new Intent(HomeActivity.this, VacinaActivity.class);
+        startActivity(intent);
+    }
+
+    public void navegarDetalhesUnidade() {
+        Intent intent = new Intent(HomeActivity.this, UnidadeActivity.class);
+        startActivity(intent);
     }
 }

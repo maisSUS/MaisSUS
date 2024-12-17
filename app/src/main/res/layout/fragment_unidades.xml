@@ -7,6 +7,7 @@
     tools:context=".fragments.UnidadesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUnidades"
         android:layout_width="409dp"
         android:layout_height="694dp"
         android:layout_marginStart="8dp"
@@ -16,16 +17,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUnidade" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvUnidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="TextView"
+        android:text="Unidades"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

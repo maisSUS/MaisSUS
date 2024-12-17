@@ -16,10 +16,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvNomeUnidadeItem"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIconeUnidade" />
+        app:layout_constraintTop_toBottomOf="@+id/imvIconeUnidade" />
 
     <ImageView
-        android:id="@+id/tvIconeUnidade"
+        android:id="@+id/imvIconeUnidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,7 +39,7 @@
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/tvLocalizacao"
         app:layout_constraintEnd_toStartOf="@+id/btn_detalheubs"
-        app:layout_constraintStart_toEndOf="@+id/tvIconeUnidade"
+        app:layout_constraintStart_toEndOf="@+id/imvIconeUnidade"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
