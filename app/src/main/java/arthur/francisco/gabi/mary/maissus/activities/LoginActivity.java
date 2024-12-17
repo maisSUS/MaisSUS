@@ -1,6 +1,9 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
 import android.os.Bundle;
+import android.text.InputType;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
