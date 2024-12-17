@@ -1,5 +1,6 @@
 package arthur.francisco.gabi.mary.maissus.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,8 @@ import java.util.List;
 import java.util.Map;
 
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.activities.AgendarConsultaActivity;
+import arthur.francisco.gabi.mary.maissus.activities.AgendarExameActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -95,25 +98,39 @@ public class HomeFragment extends Fragment {
         Button btVacinas = view.findViewById(R.id.btVacinas);
         Button btUnidades = view.findViewById(R.id.btUnidades);
 
-        btAgdConsulta.setOnClickListener(v -> {
-            // Ação para o botão Agendar Consulta
-            // Exemplo: Navegar para outra tela ou mostrar um Toast
+        btAgdConsulta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, AgendamentosFragment.class);
+            }
         });
 
-        btAgdExame.setOnClickListener(v -> {
-            // Ação para o botão Agendar Exame
+        btAgdExame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, AgendarExameActivity.class);
+            }
         });
 
-        btAgendamentos.setOnClickListener(v -> {
-            // Ação para o botão Meus Agendamentos
+        btAgendamentos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, AgendarConsultaActivity.class);
+            }
         });
 
-        btVacinas.setOnClickListener(v -> {
-            // Ação para o botão Vacinas
+        btVacinas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, VacinasFragment.class);
+            }
         });
 
-        btUnidades.setOnClickListener(v -> {
-            // Ação para o botão Unidades de Saúde
+        btUnidades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeFragment.this, UnidadesFragment.class);
+            }
         });
     }
 }

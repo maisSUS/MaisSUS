@@ -7,6 +7,8 @@
         <item name="android:textViewStyle">@style/CustomTextViewStyle</item>
         <item name="android:spinnerStyle">@style/CustomSpinnerStyle</item>
         <item name="android:buttonStyle">@style/ButtonStlyeGreen</item>
+        <item name="android:textColor">@color/black</item>
+
     </style>
 
     <style name="CustomTextViewStyle" parent="Widget.AppCompat.TextView">
