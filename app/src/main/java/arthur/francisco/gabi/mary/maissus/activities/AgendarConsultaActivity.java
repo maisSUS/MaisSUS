@@ -1,5 +1,6 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -59,9 +60,9 @@ public class AgendarConsultaActivity extends AppCompatActivity {
 
         // Listas de exemplo
         List<String> unidades = Arrays.asList("URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
-        List<String> especialidades = Arrays.asList("Clínico Geral", "Dermatologista", "Pediatria");
+        List<String> especialidades = Arrays.asList("Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
         List<String> profissionais = Arrays.asList("Katia Flávia dos Santos", "Ana Paula Silva", "Maria Eduarda Rodrigues");
-        List<String> horarios = Arrays.asList("08:00", "09:00", "10:00");
+        List<String> horarios = Arrays.asList("08:00", "08:30", "09:00", "09:30", "10:00");
 
         // Configurando os Adapters
         configurarSpinner(spinnerUnidade, unidades);
@@ -84,12 +85,27 @@ public class AgendarConsultaActivity extends AppCompatActivity {
                 } else {
                     // Lógica para prosseguir com os dados
                     Toast.makeText(AgendarConsultaActivity.this, "Consulta agendada com sucesso!", Toast.LENGTH_SHORT).show();
+
+                    // Lógica para navegar para a próxima tela
+                    Intent intent = new Intent(AgendarConsultaActivity.this, ProximaActivity.class);
+                    // Passando dados para a próxima tela (opcional)
+                    intent.putExtra("unidade", unidadeSelecionada);
+                    intent.putExtra("especialidade", especialidadeSelecionada);
+                    intent.putExtra("profissional", profissionalSelecionado);
+                    intent.putExtra("data", data);
+                    intent.putExtra("horario", horarioSelecionado);
+                    startActivity(intent);
                 }
             }
         });
 
-        // Evento para abrir um DatePicker ao clicar no campo de data
-        etData.setOnClickListener(v -> abrirDatePicker());
+        // Configurando o clique no EditText
+        etData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirDatePicker();
+            }
+        });
     }
 
     private void configurarSpinner(Spinner spinner, List<String> itens) {
@@ -99,6 +115,25 @@ public class AgendarConsultaActivity extends AppCompatActivity {
     }
 
     private void abrirDatePicker() {
-        // Implementar DatePicker
+        // Obtendo a data atual
+        /*
+        final Calendar calendario = Calendar.getInstance();
+        int ano = calendario.get(Calendar.YEAR);
+        int mes = calendario.get(Calendar.MONTH);
+        int dia = calendario.get(Calendar.DAY_OF_MONTH);
+
+        // Criando o DatePickerDialog
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                // Formatar a data selecionada e exibir no EditText
+                String dataSelecionada = dayOfMonth + "/" + (month + 1) + "/" + year;
+                etData.setText(dataSelecionada);
+            }
+        }, ano, mes, dia);
+
+        // Exibindo o DatePickerDialog
+        datePickerDialog.show();
+        */
     }
 }
