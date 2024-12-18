@@ -59,10 +59,10 @@ public class AgendarConsultaActivity extends AppCompatActivity {
         Button btnConsulta = findViewById(R.id.btnConsulta);
 
         // Listas de exemplo
-        List<String> unidades = Arrays.asList("URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
-        List<String> especialidades = Arrays.asList("Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
-        List<String> profissionais = Arrays.asList("Katia Flávia dos Santos", "Ana Paula Silva", "Maria Eduarda Rodrigues");
-        List<String> horarios = Arrays.asList("08:00", "08:30", "09:00", "09:30", "10:00");
+        List<String> unidades = Arrays.asList("Selecione uma unidade", "URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
+        List<String> especialidades = Arrays.asList("Selecione uma especialidade", "Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
+        List<String> profissionais = Arrays.asList("Selecione um profissional", "Katia Flávia dos Santos", "Ana Paula Silva", "Maria Eduarda Rodrigues");
+        List<String> horarios = Arrays.asList("Selecione um horário", "08:00", "08:30", "09:00", "09:30", "10:00");
 
         // Configurando os Adapters
         configurarSpinner(spinnerUnidade, unidades);
@@ -74,20 +74,39 @@ public class AgendarConsultaActivity extends AppCompatActivity {
         btnConsulta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String unidadeSelecionada = spinnerUnidade.getSelectedItem().toString();
-                String especialidadeSelecionada = spinnerEspecialidade.getSelectedItem().toString();
-                String profissionalSelecionado = spinnerProfissional.getSelectedItem().toString();
+                int unidadeSelecionada = spinnerUnidade.getSelectedItemPosition();
+                int especialidadeSelecionada = spinnerEspecialidade.getSelectedItemPosition();
+                int profissionalSelecionado = spinnerProfissional.getSelectedItemPosition();
                 String data = etData.getText().toString();
-                String horarioSelecionado = spinnerHorario.getSelectedItem().toString();
+                int horarioSelecionado = spinnerHorario.getSelectedItemPosition();
 
-                if (data.isEmpty()) {
-                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, escolha uma data!", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Lógica para prosseguir com os dados
-                    Toast.makeText(AgendarConsultaActivity.this, "Consulta agendada com sucesso!", Toast.LENGTH_SHORT).show();
 
-                    finish();
+                if(unidadeSelecionada == 0) {
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, selecione uma unidade!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+                if(especialidadeSelecionada == 0) {
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, selecione uma especialidade!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(profissionalSelecionado == 0) {
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, selecione um profissional!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(horarioSelecionado == 0) {
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, selecione um horário!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(data.isEmpty()){
+                    Toast.makeText(AgendarConsultaActivity.this, "Por favor, escolha uma data!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                finish();
             }
         });
 
