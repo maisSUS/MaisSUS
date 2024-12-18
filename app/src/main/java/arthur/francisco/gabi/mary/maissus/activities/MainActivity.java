@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.francisco.gabi.mary.maissus.R;
-import arthur.francisco.gabi.mary.maissus.Util.Config;
+import arthur.francisco.gabi.mary.maissus.util.Config;
 
 public class MainActivity extends AppCompatActivity {
 

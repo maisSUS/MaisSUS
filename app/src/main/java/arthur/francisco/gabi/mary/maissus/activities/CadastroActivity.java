@@ -15,7 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.francisco.gabi.mary.maissus.R;
-import arthur.francisco.gabi.mary.maissus.Util.Config;
+import arthur.francisco.gabi.mary.maissus.util.Config;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -98,6 +98,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(CadastroActivity.this, HomeActivity.class);
                 startActivity(intent);
+
             }
         });
 

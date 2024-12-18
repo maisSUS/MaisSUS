@@ -1,5 +1,6 @@
 package arthur.francisco.gabi.mary.maissus.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.activities.LoginActivity;
+import arthur.francisco.gabi.mary.maissus.util.Config;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,7 +73,10 @@ public class PerfilFragment extends Fragment {
         btnSairConta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Config.setLogin(getContext(), "");
+                Config.setPassword(getContext(),"");
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 
