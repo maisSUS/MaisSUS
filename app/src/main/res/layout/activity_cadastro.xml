@@ -30,7 +30,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:paddingTop="16dp"
-                app:srcCompat="@drawable/ic_action_logoverde" />
+                app:srcCompat="@drawable/logo_sus" />
 
             <!-- Título -->
             <TextView

@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.Util.Config;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -88,8 +89,15 @@ public class CadastroActivity extends AppCompatActivity {
                     Toast.makeText(CadastroActivity.this, "Campo de 'Confirmar Senha' não preenchido", Toast.LENGTH_LONG).show();
                     return;
                 }
+                if(!senha.equals(confirmarSenha)) {
+                    Toast.makeText(CadastroActivity.this, "Senha não confere", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                Config.setLogin(CadastroActivity.this, cpf);
+                Config.setPassword(CadastroActivity.this, senha);
 
                 Intent intent = new Intent(CadastroActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 

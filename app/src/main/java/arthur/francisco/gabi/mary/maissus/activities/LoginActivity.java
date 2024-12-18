@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.Util.Config;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -54,7 +55,11 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Campo de 'Senha' não preenchido", Toast.LENGTH_LONG).show();
                     return;
                 }
+                Config.setLogin(LoginActivity.this, cpf);
+                Config.setPassword(LoginActivity.this, senha);
+
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
     }

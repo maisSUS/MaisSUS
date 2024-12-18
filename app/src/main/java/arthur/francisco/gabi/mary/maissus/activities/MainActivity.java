@@ -1,5 +1,6 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.Util.Config;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,5 +24,17 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        if(Config.getLogin(MainActivity.this).isEmpty()) {
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
+        // Se o usuário já logou, então a informação de login está guardada na app. Então
+        // a app é redirecionada para a tela principal da app (HomeActivity)
+        else {
+            Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 }

@@ -1,4 +1,4 @@
-package arthur.francisco.gabi.mary.maissus.util;
+package arthur.francisco.gabi.mary.maissus.Util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
