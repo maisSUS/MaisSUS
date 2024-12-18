@@ -86,15 +86,7 @@ public class AgendarConsultaActivity extends AppCompatActivity {
                     // Lógica para prosseguir com os dados
                     Toast.makeText(AgendarConsultaActivity.this, "Consulta agendada com sucesso!", Toast.LENGTH_SHORT).show();
 
-                    // Lógica para navegar para a próxima tela
-                    Intent intent = new Intent(AgendarConsultaActivity.this, ProximaActivity.class);
-                    // Passando dados para a próxima tela (opcional)
-                    intent.putExtra("unidade", unidadeSelecionada);
-                    intent.putExtra("especialidade", especialidadeSelecionada);
-                    intent.putExtra("profissional", profissionalSelecionado);
-                    intent.putExtra("data", data);
-                    intent.putExtra("horario", horarioSelecionado);
-                    startActivity(intent);
+                    finish();
                 }
             }
         });

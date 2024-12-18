@@ -1,14 +1,26 @@
 package arthur.francisco.gabi.mary.maissus.fragments;
 
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 import arthur.francisco.gabi.mary.maissus.R;
+import arthur.francisco.gabi.mary.maissus.activities.HomeActivity;
+import arthur.francisco.gabi.mary.maissus.adapters.UnidadesAdapter;
+import arthur.francisco.gabi.mary.maissus.model.HomeActivityViewModel;
+import arthur.francisco.gabi.mary.maissus.model.Unidade;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,21 +42,8 @@ public class UnidadesFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment UnidadesFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static UnidadesFragment newInstance(String param1, String param2) {
+    public static UnidadesFragment newInstance() {
         UnidadesFragment fragment = new UnidadesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -62,5 +61,20 @@ public class UnidadesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_unidades, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        HomeActivityViewModel homeActivityViewModel = new ViewModelProvider(getActivity()).get(HomeActivityViewModel.class);
+        List<Unidade> unidades = homeActivityViewModel.getUnidades();
+
+        UnidadesAdapter unidadesAdapter = new UnidadesAdapter((HomeActivity) getActivity(), unidades);
+
+        RecyclerView rvUnidades = view.findViewById(R.id.rvUnidades);
+        rvUnidades.setAdapter(unidadesAdapter);
+
+        rvUnidades.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 }

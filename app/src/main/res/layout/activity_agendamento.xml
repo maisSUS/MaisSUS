@@ -117,7 +117,7 @@
                 android:id="@+id/tvDataConsultaMaisPadrao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="dd/mm/aaaa"
+                android:text="12/04/2007"
                 android:textSize="16sp" />
         </LinearLayout>
 
