@@ -1,11 +1,13 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
-import android.content.Intent;
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -16,6 +18,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 import arthur.francisco.gabi.mary.maissus.R;
@@ -36,7 +39,7 @@ public class AgendarExameActivity extends AppCompatActivity {
         Spinner spinnerUnidade = findViewById(R.id.spUnidade);
         Spinner spinnerExame = findViewById(R.id.spExame);
         Spinner spinnerHorario = findViewById(R.id.spHorario);
-        EditText etData = findViewById(R.id.etData);
+        EditText etData = findViewById(R.id.etDataEx);
         Button btnExame = findViewById(R.id.btnExame);
 
         List<String> unidades = Arrays.asList("Selecione uma unidade", "URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
@@ -46,6 +49,23 @@ public class AgendarExameActivity extends AppCompatActivity {
         configurarSpinner(spinnerUnidade, unidades);
         configurarSpinner(spinnerExame, exames);
         configurarSpinner(spinnerHorario, horarios);
+
+        ImageButton imbData = findViewById(R.id.imbDataEx);
+        imbData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar mCalendar = Calendar.getInstance();
+                int year = mCalendar.get(Calendar.YEAR);
+                int month = mCalendar.get(Calendar.MONTH);
+                int dayOfMonth = mCalendar.get(Calendar.DAY_OF_MONTH);
+                new DatePickerDialog(AgendarExameActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        etData.setText(String.valueOf(dayOfMonth) + "/" + String.valueOf(month) + "/" + String.valueOf(year));
+                    }
+                }, year, month, dayOfMonth).show();
+            }
+        });
 
         btnExame.setOnClickListener(new View.OnClickListener() {
             @Override
