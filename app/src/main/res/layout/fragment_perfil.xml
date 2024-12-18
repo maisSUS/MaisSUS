@@ -14,148 +14,163 @@
         <!-- Cabeçalho -->
 
         <!-- Título Perfil -->
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="80dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Perfil"
-            android:textSize="22sp"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center"
-            android:textColor="#000000"
-            android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Perfil"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="#FFFFFF"
+                    android:elevation="4dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:radius="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#4C8B76"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Dados pessoais"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Nome do Usuário -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Nome do usuário"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fulano da Silva Santos"
+                        android:textColor="#000000" />
+
+                    <!-- CPF -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="CPF"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123.456.789-00"
+                        android:textColor="#000000" />
+
+                    <!-- Cartão Nacional de Saúde -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Cartão Nacional de Saúde"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123456789098765"
+                        android:textColor="#000000" />
+
+                    <!-- Telefone -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Telefone"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(27) 99345-6789"
+                        android:textColor="#000000" />
+
+                    <!-- Email -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="E-mail"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fulanosilva@gmail.com"
+                        android:textColor="#000000" />
+
+                    <!-- Botão Editar Dados -->
+                    <Button
+                        android:id="@+id/btnEditarDados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="#4C8B76"
+                        android:text="Editar dados"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSairConta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#4C8B76"
+                        android:text="Sair da conta"
+                        android:textColor="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/btnAlterarSenha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#4C8B76"
+                        android:text="Alterar Senha"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
         <!-- Cartão Dados Pessoais -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:orientation="vertical"
-            android:background="#FFFFFF"
-            android:elevation="4dp"
-            android:padding="16dp"
-            android:radius="8dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dados pessoais"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:background="#4C8B76"
-                android:padding="8dp"
-                android:gravity="center" />
-
-            <!-- Nome do Usuário -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome do usuário"
-                android:textStyle="italic"
-                android:layout_marginTop="12dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fulano da Silva Santos"
-                android:textColor="#000000" />
-
-            <!-- CPF -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CPF"
-                android:textStyle="italic"
-                android:layout_marginTop="8dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="123.456.789-00"
-                android:textColor="#000000" />
-
-            <!-- Cartão Nacional de Saúde -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cartão Nacional de Saúde"
-                android:textStyle="italic"
-                android:layout_marginTop="8dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="123456789098765"
-                android:textColor="#000000" />
-
-            <!-- Telefone -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Telefone"
-                android:textStyle="italic"
-                android:layout_marginTop="8dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="(27) 99345-6789"
-                android:textColor="#000000" />
-
-            <!-- Email -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="E-mail"
-                android:textStyle="italic"
-                android:layout_marginTop="8dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="fulanosilva@gmail.com"
-                android:textColor="#000000" />
-
-            <!-- Botão Editar Dados -->
-            <Button
-                android:id="@+id/btnEditarDados"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Editar dados"
-                android:backgroundTint="#4C8B76"
-                android:textColor="#FFFFFF"
-                android:layout_marginTop="12dp" />
-        </LinearLayout>
-
         <!-- Botões Sair da Conta e Alterar Senha -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="8dp">
-
-            <Button
-                android:id="@+id/btnSairConta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#4C8B76"
-                android:text="Sair da conta"
-                android:textColor="#FFFFFF" />
-
-            <Space
-                android:layout_width="25dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/btnAlterarSenha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Alterar Senha"
-                android:backgroundTint="#4C8B76"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
 
         <!-- Menu inferior -->
 
