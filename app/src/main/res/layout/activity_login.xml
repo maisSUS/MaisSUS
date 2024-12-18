@@ -83,13 +83,14 @@
 
         <!-- Link para Criar Conta -->
         <TextView
+            android:id="@+id/tvCadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:text="Não possui conta? Crie uma aqui"
             android:textColor="#4C8B76"
-            android:textSize="14sp"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
 </LinearLayout>

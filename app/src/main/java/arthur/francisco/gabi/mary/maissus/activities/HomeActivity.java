@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -35,22 +37,28 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.opHome:
-                        HomeFragment homeFragment = HomeFragment.newInstance();
-                        setFragment(homeFragment);
-                        break;
-                    case R.id.opAgendamentos:
-                        AgendamentosFragment agendamentosFragment = AgendamentosFragment.newInstance();
-                        setFragment(agendamentosFragment);
-                        break;
-                    case R.id.opPerfil:
-                        PerfilFragment perfilFragment = PerfilFragment.newInstance();
-                        setFragment(perfilFragment);
-                        break;
+                if (item.getItemId() == R.id.opHome) {
+                    HomeFragment homeFragment = HomeFragment.newInstance();
+                    setFragment(homeFragment);
+                }
+                if (item.getItemId() == R.id.opAgendamentos) {
+                    AgendamentosFragment agendamentosFragment = AgendamentosFragment.newInstance();
+                    setFragment(agendamentosFragment);
+                }
+                if (item.getItemId() == R.id.opPerfil){
+                    PerfilFragment perfilFragment = PerfilFragment.newInstance();
+                    setFragment(perfilFragment);
+
                 }
                 return true;
             }
         });
     }
+    void setFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.flHome, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
 }

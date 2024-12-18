@@ -1,9 +1,13 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +28,34 @@ public class LoginActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        TextView tvCadastro = findViewById(R.id.tvCadastro);
+        tvCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+            }
+        });
+
+        Button btnEntrar = findViewById(R.id.btnEntrar);
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText etCPF = findViewById(R.id.etCPF);
+                final String cpf = etCPF.getText().toString();
+                if (cpf.isEmpty()){
+                    Toast.makeText(LoginActivity.this, "Campo de 'CPF' não preenchido", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                EditText etSenha = findViewById(R.id.etSenha);
+                final String senha = etSenha.getText().toString();
+                if (senha.isEmpty()){
+                    Toast.makeText(LoginActivity.this, "Campo de 'Senha' não preenchido", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            }
         });
     }
 }
