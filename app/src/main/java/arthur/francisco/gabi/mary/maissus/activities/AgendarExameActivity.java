@@ -39,9 +39,9 @@ public class AgendarExameActivity extends AppCompatActivity {
         EditText etData = findViewById(R.id.etData);
         Button btnExame = findViewById(R.id.btnExame);
 
-        List<String> unidades = Arrays.asList("URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
-        List<String> exames = Arrays.asList("Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
-        List<String> horarios = Arrays.asList("08:00", "08:30", "09:00", "09:30", "10:00");
+        List<String> unidades = Arrays.asList("Selecione uma unidade", "URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
+        List<String> exames = Arrays.asList("Selecione um exame", "Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
+        List<String> horarios = Arrays.asList("Selecione um horário", "08:00", "08:30", "09:00", "09:30", "10:00");
 
         configurarSpinner(spinnerUnidade, unidades);
         configurarSpinner(spinnerExame, exames);
@@ -50,25 +50,32 @@ public class AgendarExameActivity extends AppCompatActivity {
         btnExame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String unidadeSelecionada = spinnerUnidade.getSelectedItem().toString();
-                String exameSelecionado = spinnerExame.getSelectedItem().toString();
-                String horarioSelecionado = spinnerHorario.getSelectedItem().toString();
+                int unidadeSelecionada = spinnerUnidade.getSelectedItemPosition();
+                int exameSelecionado = spinnerExame.getSelectedItemPosition();
+                int horarioSelecionado = spinnerHorario.getSelectedItemPosition();
                 String data = etData.getText().toString();
+
+                if(unidadeSelecionada == 0) {
+                    Toast.makeText(AgendarExameActivity.this, "Por favor, selecione uma unidade!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(exameSelecionado == 0) {
+                    Toast.makeText(AgendarExameActivity.this, "Por favor, selecione um exame!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(horarioSelecionado == 0) {
+                    Toast.makeText(AgendarExameActivity.this, "Por favor, selecione um horário!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if(data.isEmpty()){
                     Toast.makeText(AgendarExameActivity.this, "Por favor, escolha uma data!", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                else{
-                    Toast.makeText(AgendarExameActivity.this, "Exame agendado com sucesso!", Toast.LENGTH_SHORT).show();
-                    // Lógica para navegar para a próxima tela
-                    Intent intent = new Intent(AgendarExameActivity.this, ProximaActivity.class);
-                    // Passando dados para a próxima tela (opcional)
-                    intent.putExtra("unidade", unidadeSelecionada);
-                    intent.putExtra("exame", exameSelecionado);
-                    intent.putExtra("data", data);
-                    intent.putExtra("horario", horarioSelecionado);
-                    startActivity(intent);
-                }
+
+                finish();
             }
         });
 
