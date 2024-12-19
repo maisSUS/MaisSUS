@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:logo="@drawable/ic_action_logo"
+        app:logo="@drawable/ic_action_logobranca"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextColor="#FDFDFD" />
 
