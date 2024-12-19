@@ -37,7 +37,7 @@ public class HomeActivityViewModel extends ViewModel {
 
         Agendamento a5 = new Agendamento();
         a5.nomePaciente = "Francisco Lorenssute dos Santos";
-        a5.especialidade = "Médico Clinico Geral";
+        a5.especialidade = "Clínico Geral";
         a5.data = new Date();
         agendamentos.add(a5);
 
