@@ -173,7 +173,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnCancelarMais"
+            android:id="@+id/btnCancelar"
             style="@style/ButtonStlyeRed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
