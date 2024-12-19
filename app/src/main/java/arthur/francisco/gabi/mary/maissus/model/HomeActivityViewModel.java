@@ -19,7 +19,7 @@ public class HomeActivityViewModel extends ViewModel {
 
         Agendamento a2 = new Agendamento();
         a2.nomePaciente = "Francisco Lorenssute dos Santos";
-        a2.especialidade = "Pediatra";
+        a2.especialidade = "Papa-Nicolau";
         a2.data = new Date();
         agendamentos.add(a2);
 
@@ -31,7 +31,7 @@ public class HomeActivityViewModel extends ViewModel {
 
         Agendamento a4 = new Agendamento();
         a4.nomePaciente = "Francisco Lorenssute dos Santos";
-        a4.especialidade = "Dermatologista";
+        a4.especialidade = "Mamografia";
         a4.data = new Date();
         agendamentos.add(a4);
 
