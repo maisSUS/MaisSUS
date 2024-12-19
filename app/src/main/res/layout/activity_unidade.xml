@@ -134,7 +134,7 @@
             android:id="@+id/tvDiaSermana1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Segunda: 07:00-21:00"
+            android:text="Segunda: 07:00-21:00"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -147,13 +147,13 @@
             android:id="@+id/diaSemana3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Quarta: 07:00-21:00" />
+            android:text="Quarta: 07:00-21:00" />
 
         <TextView
             android:id="@+id/diaSemana4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Quinta: 07:00-21:00" />
+            android:text="Quinta: 07:00-21:00" />
 
         <TextView
             android:id="@+id/diaSemana5"
