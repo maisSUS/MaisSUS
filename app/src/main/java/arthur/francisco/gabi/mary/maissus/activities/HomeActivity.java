@@ -34,6 +34,10 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Define o HomeFragment como o fragmento inicial
+        HomeFragment homeFragment = HomeFragment.newInstance();
+        setFragment(homeFragment);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bnvHome);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

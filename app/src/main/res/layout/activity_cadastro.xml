@@ -24,7 +24,7 @@
 
             <!-- Logo SUS -->
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imvLogoCadastro"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_gravity="center"
@@ -32,6 +32,7 @@
 
             <!-- Título -->
             <TextView
+                android:id="@+id/tvCriarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -148,6 +149,7 @@
 
             <!-- Link para Login -->
             <TextView
+                android:id="@+id/tvMensagemLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

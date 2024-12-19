@@ -25,6 +25,7 @@
                 android:orientation="vertical" >
 
                 <TextView
+                    android:id="@+id/tvPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -45,6 +46,7 @@
                     android:radius="8dp">
 
                     <TextView
+                        android:id="@+id/tvDadosPessoais"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#4C8B76"
@@ -57,6 +59,7 @@
 
                     <!-- Nome do Usuário -->
                     <TextView
+                        android:id="@+id/tvUser"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -64,6 +67,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tvNome"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Fulano da Silva Santos"
@@ -71,6 +75,7 @@
 
                     <!-- CPF -->
                     <TextView
+                        android:id="@+id/tvCPF"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -78,6 +83,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tvCPFnum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="123.456.789-00"
@@ -85,6 +91,7 @@
 
                     <!-- Cartão Nacional de Saúde -->
                     <TextView
+                        android:id="@+id/tvCartaoSUS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -92,6 +99,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tvNumCartoaSUS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="123456789098765"
@@ -99,6 +107,7 @@
 
                     <!-- Telefone -->
                     <TextView
+                        android:id="@+id/tvTel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -106,6 +115,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tvTelNum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="(27) 99345-6789"
@@ -113,6 +123,7 @@
 
                     <!-- Email -->
                     <TextView
+                        android:id="@+id/tvEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -120,6 +131,7 @@
                         android:textStyle="italic" />
 
                     <TextView
+                        android:id="@+id/tvEmailValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="fulanosilva@gmail.com"
