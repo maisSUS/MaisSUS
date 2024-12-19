@@ -1,7 +1,9 @@
 package arthur.francisco.gabi.mary.maissus.activities;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,7 +14,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -43,7 +47,7 @@ public class AgendarExameActivity extends AppCompatActivity {
         Button btnExame = findViewById(R.id.btnExame);
 
         List<String> unidades = Arrays.asList("Selecione uma unidade", "URS Feu Rosa", "UBS Jacaraípe", "UBS Vila Nova de Colares");
-        List<String> exames = Arrays.asList("Selecione um exame", "Clínico Geral", "Dermatologista", "Pediatria", "Otorrinolaringologista");
+        List<String> exames = Arrays.asList("Selecione um exame", "Exame de Sangue", "Papa-Nicolau", "Pré-Natal", "Radiografia", "Mamografia");
         List<String> horarios = Arrays.asList("Selecione um horário", "08:00", "08:30", "09:00", "09:30", "10:00");
 
         configurarSpinner(spinnerUnidade, unidades);
@@ -95,16 +99,28 @@ public class AgendarExameActivity extends AppCompatActivity {
                     return;
                 }
 
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(AgendarExameActivity.this, R.style.MyTimePickerDialogTheme));
+                LayoutInflater inflater = getLayoutInflater();
+
+                builder.setView(inflater.inflate(R.layout.dlg_confirmar_exame, null))
+
+                        // Add action buttons
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+                builder.setTitle("Confirmar exame");
+                builder.create().show();
             }
         });
 
-        etData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirDatePicker();
-            }
-        });
+
     }
 
     private void configurarSpinner(Spinner spinner, List<String> itens) {
@@ -112,26 +128,5 @@ public class AgendarExameActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }
-    private void abrirDatePicker() {
-        // Obtendo a data atual
-        /*
-        final Calendar calendario = Calendar.getInstance();
-        int ano = calendario.get(Calendar.YEAR);
-        int mes = calendario.get(Calendar.MONTH);
-        int dia = calendario.get(Calendar.DAY_OF_MONTH);
 
-        // Criando o DatePickerDialog
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                // Formatar a data selecionada e exibir no EditText
-                String dataSelecionada = dayOfMonth + "/" + (month + 1) + "/" + year;
-                etData.setText(dataSelecionada);
-            }
-        }, ano, mes, dia);
-
-        // Exibindo o DatePickerDialog
-        datePickerDialog.show();
-        */
-    }
 }

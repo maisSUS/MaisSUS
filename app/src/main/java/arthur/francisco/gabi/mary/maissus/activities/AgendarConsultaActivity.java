@@ -24,6 +24,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -69,13 +70,13 @@ public class AgendarConsultaActivity extends AppCompatActivity {
         spinnerEspecialidade.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position != 1){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(AgendarConsultaActivity.this);
+                if(position != 1 && position != 0){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(AgendarConsultaActivity.this, R.style.MyTimePickerDialogTheme));
                     builder.setTitle("ATENÇÃO!");
                     builder.setMessage("Para agendar essa consulta é necessário ter o encaminhamento do clínico geral. Se já possui, siga em frente. Se não possui, procure um clínico geral antes.");
                     builder.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            // User taps OK button.
+
                         }
                     });
                     builder.setNegativeButton("Voltar", new DialogInterface.OnClickListener() {
@@ -83,8 +84,7 @@ public class AgendarConsultaActivity extends AppCompatActivity {
                             // User cancels the dialog.
                         }
                     });
-
-                    AlertDialog dialog = builder.create();
+                    builder.create().show();
                 }
             }
 
@@ -160,14 +160,12 @@ public class AgendarConsultaActivity extends AppCompatActivity {
                 }
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(AgendarConsultaActivity.this, R.style.MyTimePickerDialogTheme));
-                // Get the layout inflater.
                 LayoutInflater inflater = getLayoutInflater();
 
-                // Inflate and set the layout for the dialog.
-                // Pass null as the parent view because it's going in the dialog layout.
                 builder.setView(inflater.inflate(R.layout.dlg_confirmar_consulta, null))
+
                         // Add action buttons
-                        .setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 finish();
