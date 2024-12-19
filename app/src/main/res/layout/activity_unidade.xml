@@ -40,10 +40,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:padding="8dp"
         android:text="Informações da UBS"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,10 +64,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14">
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tvNomeUnidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ubs Feu rosa"
+            android:paddingBottom="8dp"
+            android:text="UBS Feu rosa"
+            android:textColor="@color/verde_button"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -77,14 +79,15 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tvLocalizacaoUbs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Localização" />
+                android:text="Localização:"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvDoses"
+                android:id="@+id/tvLocalizacaoUbsModelo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -98,63 +101,71 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tvContatoUbs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Contato:" />
+                android:text="Contato:"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvIdade"
+                android:id="@+id/tvContatoUbsModelo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="(027) 12345-6789" />
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvHorariodeFuncionamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Horário de Funcionamento"
-            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/tvDiaSermana1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Segunda: 07:00-21:00" />
+            android:text=" Segunda: 07:00-21:00"
+            tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/tvDiaSemana2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Terça: 07:00-21:00" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/diaSemana3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Quarta: 07:00-21:00" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/diaSemana4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Quinta: 07:00-21:00" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/diaSemana5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sexta: 07:00-21:00" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/diaSemana6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sabado e Domingo: Fechado" />
+            android:text="Sábado e Domingo: Fechado" />
 
     </LinearLayout>
 

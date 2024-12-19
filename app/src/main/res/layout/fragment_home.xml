@@ -15,11 +15,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="Agendar Consulta" />
+        android:background="@drawable/bg_shadow"
+        android:text="Agendar Consulta"
+        android:textColor="#000000" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+
+    bg_
 
     <Button
         android:id="@+id/btAgdExame"
@@ -27,7 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="Agendar Exame" />
+        android:background="@drawable/bg_shadow"
+        android:text="Agendar Exame"
+        android:textColor="#000000" />
 
     <Space
         android:layout_width="match_parent"
@@ -39,7 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="Vacinas" />
+        android:background="@drawable/bg_shadow"
+        android:text="Vacinas"
+        android:textColor="#000000" />
 
     <Space
         android:layout_width="match_parent"
@@ -51,6 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:text="Unidades de Saúde" />
+        android:background="@drawable/bg_shadow"
+        android:text="Unidades de Saúde"
+        android:textColor="#000000" />
 
 </LinearLayout>
