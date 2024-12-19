@@ -16,8 +16,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_shadow"
-        android:drawableStart="@drawable/baseline_calendar_today_24"
-        android:drawablePadding="12dp"
+        android:drawableStart="@drawable/baseline_today_24"
+        android:drawablePadding="2dp"
         android:padding="16dp"
         android:text="Agendar Consulta"
         android:textColor="#000000" />
@@ -34,6 +34,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_shadow"
+        android:drawableStart="@drawable/baseline_today_24"
+        android:drawablePadding="2dp"
+        android:padding="16dp"
         android:text="Agendar Exame"
         android:textColor="#000000" />
 
@@ -48,6 +51,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_shadow"
+        android:drawableStart="@drawable/vacinaverdedevdd"
+        android:drawablePadding="2dp"
+        android:padding="16dp"
         android:text="Vacinas"
         android:textColor="#000000" />
 
@@ -62,6 +68,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_shadow"
+        android:drawableStart="@drawable/vacinaverde"
+        android:drawablePadding="2dp"
+        android:padding="16dp"
         android:text="Unidades de Saúde"
         android:textColor="#000000" />
 
