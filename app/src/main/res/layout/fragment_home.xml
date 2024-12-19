@@ -16,13 +16,11 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/bg_shadow"
+        android:drawableStart="@drawable/baseline_calendar_today_24"
+        android:drawablePadding="12dp"
+        android:padding="16dp"
         android:text="Agendar Consulta"
-        android:textColor="#000000"
-        android:src="@drawable/" <!-- Ícone do botão -->
-    />
-
-
-
+        android:textColor="#000000" />
 
     <Space
         android:layout_width="match_parent"
