@@ -42,4 +42,8 @@
         <item name="android:padding">10dp</item> <!-- Padding for spinner -->
         <item name="android:backgroundTint">@color/verde_spinner</item> <!-- Spinner background tint -->
     </style>
+
+    <style name="MyTimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/verde_button</item>
+    </style>
 </resources>

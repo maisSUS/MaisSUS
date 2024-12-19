@@ -53,7 +53,6 @@ public class HomeActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.opPerfil){
                     PerfilFragment perfilFragment = PerfilFragment.newInstance();
                     setFragment(perfilFragment);
-
                 }
                 return true;
             }

@@ -58,7 +58,7 @@ public class AgendarExameActivity extends AppCompatActivity {
                 int year = mCalendar.get(Calendar.YEAR);
                 int month = mCalendar.get(Calendar.MONTH);
                 int dayOfMonth = mCalendar.get(Calendar.DAY_OF_MONTH);
-                new DatePickerDialog(AgendarExameActivity.this, new DatePickerDialog.OnDateSetListener() {
+                new DatePickerDialog(AgendarExameActivity.this, R.style.MyTimePickerDialogTheme, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         etData.setText(String.valueOf(dayOfMonth) + "/" + String.valueOf(month) + "/" + String.valueOf(year));

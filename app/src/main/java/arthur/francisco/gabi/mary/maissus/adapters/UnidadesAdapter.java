@@ -3,24 +3,25 @@ package arthur.francisco.gabi.mary.maissus.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import arthur.francisco.gabi.mary.maissus.R;
 import arthur.francisco.gabi.mary.maissus.activities.HomeActivity;
+import arthur.francisco.gabi.mary.maissus.activities.VacinaActivity;
 import arthur.francisco.gabi.mary.maissus.model.Unidade;
 
 public class UnidadesAdapter extends RecyclerView.Adapter{
-    HomeActivity homeActivity;
+    AppCompatActivity activity;
     List<Unidade> unidades;
 
-    public UnidadesAdapter(HomeActivity homeActivity, List<Unidade> itens){
-        this.homeActivity = homeActivity;
+    public UnidadesAdapter(AppCompatActivity activity, List<Unidade> itens){
+        this.activity = activity;
         this.unidades = itens;
     }
 
@@ -29,7 +30,7 @@ public class UnidadesAdapter extends RecyclerView.Adapter{
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflador de layout que le o arquivo xml do item
-        LayoutInflater inflater = LayoutInflater.from(homeActivity);
+        LayoutInflater inflater = LayoutInflater.from(activity);
         //o inflador cria os elementos de interface referentes a um item e os guarda dentro de um objeto do tipo View
         View v = inflater.inflate(R.layout.item_unidade, parent, false);
         //o objeto do tipo View eh guardado dentro de um objeto do tipo MyViewHolder, que eh retornado pela funcao
@@ -56,7 +57,13 @@ public class UnidadesAdapter extends RecyclerView.Adapter{
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeActivity.navegarDetalhesUnidade();
+                if(activity instanceof HomeActivity) {
+                    ((HomeActivity) activity).navegarDetalhesUnidade();
+                }
+                else {
+                    ((VacinaActivity) activity).navegarDetalhesUnidade();
+                }
+
             }
         });
     }
