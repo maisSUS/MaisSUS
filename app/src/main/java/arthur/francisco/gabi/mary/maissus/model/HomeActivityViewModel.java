@@ -12,13 +12,13 @@ public class HomeActivityViewModel extends ViewModel {
         List<Agendamento> agendamentos = new ArrayList<>();
 
         Agendamento a1 = new Agendamento();
-        a1.nomePaciente = "Daniel Ribeiro Trindade";
+        a1.nomePaciente = "Francisco Lorenssute dos Santos";
         a1.especialidade = "Clínico Geral";
         a1.data = new Date();
         agendamentos.add(a1);
 
         Agendamento a2 = new Agendamento();
-        a2.nomePaciente = "Ana Clara Silva Costa";
+        a2.nomePaciente = "Francisco Lorenssute dos Santos";
         a2.especialidade = "Pediatra";
         a2.data = new Date();
         agendamentos.add(a2);
@@ -30,13 +30,13 @@ public class HomeActivityViewModel extends ViewModel {
         agendamentos.add(a3);
 
         Agendamento a4 = new Agendamento();
-        a4.nomePaciente = "Marielly Vitoria Alcantara";
+        a4.nomePaciente = "Francisco Lorenssute dos Santos";
         a4.especialidade = "Dermatologista";
         a4.data = new Date();
         agendamentos.add(a4);
 
         Agendamento a5 = new Agendamento();
-        a5.nomePaciente = "Henrique Araújo Soares";
+        a5.nomePaciente = "Francisco Lorenssute dos Santos";
         a5.especialidade = "Médico Clinico Geral";
         a5.data = new Date();
         agendamentos.add(a5);
@@ -82,22 +82,22 @@ public class HomeActivityViewModel extends ViewModel {
 
         Unidade u2 = new Unidade();
         u2.nome = "UBS Jacaraípe";
-        u2.localizacao = "Av Minas Gerais, Das Laranjeiras";
+        u2.localizacao = "Av Minas Gerais, Jacaraípe";
         unidades.add(u2);
 
         Unidade u3 = new Unidade();
         u3.nome = "UBS Vila Nova de Colares";
-        u3.localizacao = "Rua Papagaio, Feu Rosa";
+        u3.localizacao = "Rua Papagaio, Vila Nova de Colares";
         unidades.add(u3);
 
         Unidade u4 = new Unidade();
         u4.nome = "UBS Novo Horizonte";
-        u4.localizacao = "Rua Papagaio, Feu Rosa";
+        u4.localizacao = "Rua Papagaio, Novo Horizonte";
         unidades.add(u4);
 
         Unidade u5 = new Unidade();
-        u5.nome = "UBS ";
-        u5.localizacao = "Rua Papagaio, Feu Rosa";
+        u5.nome = "UBS Manguinhos ";
+        u5.localizacao = "Rua Papagaio, Manguinhos";
         unidades.add(u5);
 
         return unidades;
