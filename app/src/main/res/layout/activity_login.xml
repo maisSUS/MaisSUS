@@ -18,7 +18,7 @@
         <!-- Logo SUS -->
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imvLogo"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             app:srcCompat="@drawable/logosus_verde" />
@@ -26,13 +26,14 @@
         <!-- Título -->
 
         <TextView
+            android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:text="Faça seu login"
             android:textColor="#000000"
-            android:textSize="18sp"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center" />
+            android:textSize="18sp" />
 
         <!-- Campo CPF -->
 
