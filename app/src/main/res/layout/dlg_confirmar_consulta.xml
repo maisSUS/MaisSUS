@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Unidade:" />
+            android:text="Unidade:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvUnidadeNome"
@@ -39,7 +41,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Especialidade:" />
+            android:text="Especialidade:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvEspecialidadeNome"
@@ -61,7 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Especialista:" />
+            android:text="Especialista:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvEspecialistaNome"
@@ -83,7 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Data:" />
+            android:text="Data:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDataNome"
@@ -105,7 +110,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Horário:" />
+            android:text="Horário:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvHorarioNome"
@@ -125,7 +131,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Paciente:" />
+            android:text="Paciente:"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvPacienteNome"
