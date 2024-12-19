@@ -58,7 +58,7 @@
                 android:id="@+id/spUnidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#e0f5f1"
+                android:background="@drawable/bg_spinner"
                 android:spinnerMode="dropdown" />
 
             <Space
@@ -79,7 +79,7 @@
                 android:id="@+id/spExame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#e0f5f1" />
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:layout_width="match_parent"
@@ -143,7 +143,7 @@
                 android:id="@+id/spHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#e0f5f1" />
+                android:background="@drawable/bg_spinner" />
 
             <Space
                 android:layout_width="match_parent"

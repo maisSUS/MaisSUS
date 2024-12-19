@@ -13,7 +13,6 @@
         <bitmap
             android:color="@color/verde_button"
             android:src="@android:drawable/arrow_down_float"
-            android:gravity="center" />
-    </item>
+            android:gravity="center"/></item>
 </layer-list>
 
