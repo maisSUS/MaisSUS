@@ -51,7 +51,7 @@ public class AgendamentoActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int id) {
                             }
                         });
-                builder.setTitle("Deseja realmente cancelar seu agendamento?");
+                builder.setTitle("Deseja cancelar seu agendamento?");
                 builder.create().show();
             }
         });
