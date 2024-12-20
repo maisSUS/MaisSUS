@@ -137,11 +137,19 @@
             android:text="Segunda: 07:00-21:00"
             tools:ignore="HardcodedText" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:id="@+id/tvDiaSemana2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Terça: 07:00-21:00" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/diaSemana3"
@@ -149,17 +157,29 @@
             android:layout_height="wrap_content"
             android:text="Quarta: 07:00-21:00" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:id="@+id/diaSemana4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Quinta: 07:00-21:00" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:id="@+id/diaSemana5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sexta: 07:00-21:00" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <TextView
             android:id="@+id/diaSemana6"
